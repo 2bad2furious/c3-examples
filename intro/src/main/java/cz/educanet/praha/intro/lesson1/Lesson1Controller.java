@@ -13,10 +13,9 @@ public class Lesson1Controller {
 
     @GetMapping("/factorial/{n}")
     public int factorial(@PathVariable int n) {
-        int result = n;
-        while (n > 1) {
-            result *= n - 1;
-            n--;
+        int result = 1;
+        for (int i = 2; i <= n; i++) {
+            result *= i;
         }
         return result;
     }
